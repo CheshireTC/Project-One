@@ -1,0 +1,10 @@
+Losses Occured At:
+3/10: 5am, 8am, 2pm, 8pm, 11pm
+3/12: 5am, 8am, 2pm, 8pm, 11pm
+3/15: 5am, 8am, 2pm
+
+Player seen during every loss: Mylie Schmidt
+
+Count of times the player played: 13
+
+
