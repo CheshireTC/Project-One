@@ -95,9 +95,9 @@ SSH into the control node and follow the steps below:
 
 ### FAQ
 - _Which file is the playbook? Where do you copy it?_
-  - _The playbook files are found in [Ansible](Ansible) directory with playbook in their file name. These can be copied though either copy/paste into a file you create on the system, or downloaded and moved to the `/etc/ansible` directory._
+  - _The playbook files are found in the [Ansible](Ansible) directory with playbook in their file name (Also seen at the top of this page). These can be copied though either copy/paste into a file you create on the system, or downloaded and moved to the `/etc/ansible` directory._
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
   - _While in the `/etc/ansible` directory you should see a file called `hosts`. In this file you can create web server groups in which to specify what computers you want to install files on._
 - _Which URL do you navigate to in order to check that the ELK server is running?_
-  - _ To check if the ELK server is running you can navigate to `http://[your.VM.IP]:5601/app/kibana`. It should look similar to the following image:
+  - _ To check if the ELK server is running you can navigate to `http://[your.VM.IP]:5601/app/kibana`. It should look similar to the following image:_
 ![](Images/Kibana.PNG)
