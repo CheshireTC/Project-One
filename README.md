@@ -21,22 +21,22 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
+- _As said above, load balancers protect the A in the CIA triad: Availability. Ensuring as little down time as possible to our services._ 
+- _We also use the jumpbox to ensure the integrity of our web servers by restricting where access can come from._
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the servers and system files.
+- _Filebeat handles the system files by monitoring log files._
+- _Metricbeat handles the servers by collecting metrics from the system and services running on it._
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Name       | Function     | IP Address    | Operating System |
+|------------|--------------|---------------|------------------|
+| Jump Box   | Gateway      | 40.78.145.227 | Linux            |
+| Web #1     | Web Server   | 23.100.82.174 | Linux            |
+| Web #2     | Web Server   | 23.100.82.174 | Linux            |
+| ELK Server | Log Server   | 20.122.61.20  | Linux            |
 
 ### Access Policies
 
