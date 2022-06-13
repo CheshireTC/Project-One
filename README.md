@@ -88,13 +88,16 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy both the filebeat and metricbeat playbooks and config files to the /etc/ansible directory.
 - Update the config files to include the IPs and ports of the machines you are looking to monitor.
-- Run the playbook, and navigate to "http://[your.VM.IP]:5601/app/kibana#/home/tutorial/systemLogs" to check that the installation worked as expected. Check this by scrolling to the bottom and hit the "Check Data" button. You should receive a message similar to this
+- Run the playbook, and navigate to `http://[your.VM.IP]:5601/app/kibana#/home/tutorial/systemLogs` to check that the installation worked as expected. Check this by scrolling to the bottom and hit the "Check Data" button. You should receive a message similar to this
 ![](Images/FileBeat.PNG)
-- For Meatricbeat, navigate to "http://[your.VM.IP]:5601/app/kibana#/home/tutorial/dockerMetrics", and again scroll to the bottom and hit check data. You should receive a message similar to this.
+- For Meatricbeat, navigate to `http://[your.VM.IP]:5601/app/kibana#/home/tutorial/dockerMetrics`, and again scroll to the bottom and hit check data. You should receive a message similar to this.
 ![](Images/MetricBeat.PNG)
 
 ### FAQ
 - _Which file is the playbook? Where do you copy it?_
-  - _The playbook files are found in [Ansible](Ansible) file with playbook in their name. These can be copied though either copy/paste into a file you create on the system, or downloaded and moved to the `/etc/ansible` directory
+  - _The playbook files are found in [Ansible](Ansible) directory with playbook in their file name. These can be copied though either copy/paste into a file you create on the system, or downloaded and moved to the `/etc/ansible` directory._
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+  - _While in the `/etc/ansible` directory you should see a file called `hosts`. In this file you can create web server groups in which to specify what computers you want to install files on._
+- _Which URL do you navigate to in order to check that the ELK server is running?_
+  - _ To check if the ELK server is running you can navigate to `http://[your.VM.IP]:5601/app/kibana`. It should look similar to the following image:
+![](Images/Kibana.PNG)
