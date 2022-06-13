@@ -73,7 +73,7 @@ The following screenshot displays the result of running `docker ps` after succes
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 - _Web #1: 10.0.0.6_
-- _Web #2: 10.0.0.7
+- _Web #2: 10.0.0.7_
 
 We have installed the following Beats on these machines:
 - _Filebeats and Metricbeats_
@@ -86,7 +86,7 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy both the filebeat and metricbeat playbooks and config files to the /etc/ansible directory.
+- Copy both the filebeat and metricbeat playbooks and config files to the `/etc/ansible` directory.
 - Update the config files to include the IPs and ports of the machines you are looking to monitor.
 - Run the playbook, and navigate to `http://[your.VM.IP]:5601/app/kibana#/home/tutorial/systemLogs` to check that the installation worked as expected. Check this by scrolling to the bottom and hit the "Check Data" button. You should receive a message similar to this
 ![](Images/FileBeat.PNG)
@@ -99,5 +99,5 @@ SSH into the control node and follow the steps below:
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
   - _While in the `/etc/ansible` directory you should see a file called `hosts`. In this file you can create web server groups in which to specify what computers you want to install files on._
 - _Which URL do you navigate to in order to check that the ELK server is running?_
-  - _ To check if the ELK server is running you can navigate to `http://[your.VM.IP]:5601/app/kibana`. It should look similar to the following image:_
+  - _To check if the ELK server is running you can navigate to `http://[your.VM.IP]:5601/app/kibana`. It should look similar to the following image:_
 ![](Images/Kibana.PNG)
