@@ -72,25 +72,28 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- _Web #1: 10.0.0.6_
+- _Web #2: 10.0.0.7
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- _Filebeats and Metricbeats_
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- _Filebeat follows and harvests info on files that we specify and many other modules. EX: We can receive info from a syslog for number of sudo commands or ssh logins._
+- _Metricbeat allows us to collect metrics or numbers the system or other modules keep track of. EX: We can recieve info from the system on cpu usage and remaining space on the hard drive._
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy both the filebeat and metricbeat playbooks and config files to the /etc/ansible directory.
+- Update the config files to include the IPs and ports of the machines you are looking to monitor.
+- Run the playbook, and navigate to "http://[your.VM.IP]:5601/app/kibana#/home/tutorial/systemLogs" to check that the installation worked as expected. Check this by scrolling to the bottom and hit the "Check Data" button. You should receive a message similar to this
+![](Images/FileBeat.png)
+- For Meatricbeat, navigate to "http://[your.VM.IP]:5601/app/kibana#/home/tutorial/dockerMetrics", and again scroll to the bottom and hit check data. You should receive a message similar to this.
+![](Images/MetricBeat.png)
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - _Which URL do you navigate to in order to check that the ELK server is running?
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
