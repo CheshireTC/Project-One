@@ -45,26 +45,26 @@ The machines on the internal network are not exposed to the public Internet.
 Only the web machines can accept connections from the Internet (port 80). Access to this machine is only allowed from the following IP addresses:
 - _73.30.66.57_
 
-Machines within the network can only be accessed by the Jump Box.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by the Jump Box. More specifically the Docker container within the Jumpbox with the proper ssh keys.
+- _The ELK server can also be accessed through my personal computer using the IP 73.30.66.57 on port 5601 to view the Kibana dashboard._
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Name       | Publicly Accessible | Allowed IP Addresses  |
+|------------|---------------------|-----------------------|
+| Jump Box   | No                  | 73.30.66.57           |
+| Web #1/#2  | Yes                 | 73.30.66.57, 10.0.0.4 |
+| Elk Server | No                  | 73.30.66.57, 10.0.0.4 |
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- _This allows us to quickly implament this on other ELK servers consistently._
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- _The playbook begins by installing the relevant software, being Docker, Python and the module to help Docker work with python._
+- _Next, the playbook increases the memory usage of the server so that the container has the resources to run._
+- _Finally, it downloads the correct docker image and enables the service on boot to make sure it is always running._
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
