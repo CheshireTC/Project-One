@@ -67,7 +67,7 @@ The playbook implements the following tasks:
 - _Finally, it downloads the correct docker image and enables the service on boot to make sure it is always running._
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
-
+`
 ![](Images/DockerPS.png)
 
 ### Target Machines & Beats
@@ -95,6 +95,6 @@ SSH into the control node and follow the steps below:
 
 ### FAQ
 - _Which file is the playbook? Where do you copy it?_
-  - _The playbook files are found in [Ansible](Ansible) file with playbook in their name. These can be copied though either copy/paste into a file you create on the system, or downloaded and moved to the '/etc/ansible' directory
+  - _The playbook files are found in [Ansible](Ansible) file with playbook in their name. These can be copied though either copy/paste into a file you create on the system, or downloaded and moved to the `/etc/ansible` directory
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
 - _Which URL do you navigate to in order to check that the ELK server is running?
