@@ -59,7 +59,7 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _This allows us to quickly implament this on other ELK servers consistently._
+- _This allows us to quickly implement this on other ELK servers consistently._
 
 The playbook implements the following tasks:
 - _The playbook begins by installing the relevant software, being Docker, Python and the module to help Docker work with python._
@@ -80,7 +80,7 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 - _Filebeat follows and harvests info on files that we specify and many other modules. EX: We can receive info from a syslog for number of sudo commands or ssh logins._
-- _Metricbeat allows us to collect metrics or numbers the system or other modules keep track of. EX: We can recieve info from the system on cpu usage and remaining space on the hard drive._
+- _Metricbeat allows us to collect metrics or numbers the system or other modules keep track of. EX: We can receive info from the system on cpu usage and remaining space on the hard drive._
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
